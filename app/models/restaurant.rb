@@ -1,8 +1,22 @@
 class Restaurant
-  attr_reader :name
+  attr_reader :rest_name
 
-  def initialize(name)
-    @name = name
+# CLASS METHODS
+
+  @@all = []
+
+  def initialize(rest_name)
+    @rest_name = rest_name
+    @@all << self
   end
+  
+  def self.all
+    @@all
+  end
+
+
+
+# INSTANCE METHODS
+
 
 end
